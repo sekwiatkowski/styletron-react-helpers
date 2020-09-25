@@ -1,0 +1,14 @@
+{
+    "name": "styletron-react-helpers",
+    "version": "0.1.0",
+    "main": "src/index.js",
+    "type": "module",
+    "devDependencies": {
+        "react": "^16.13.1",
+        "styletron-react": "^5.2.7"
+    },
+    "peerDependencies": {
+        "react": "^16.13.1",
+        "styletron-react": "^5.2.7"
+    }
+}
