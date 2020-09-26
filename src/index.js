@@ -15,14 +15,14 @@ export function useCss() {
     }
 }
 
-export function className(className) {
-    return { className }
-}
-
 export function useClassName() {
     const [css] = useStyletron()
 
-    return (...styles) => className(css(mergeStyles(styles)))
+    return (...styles) => {
+        return {
+            className: css(mergeStyles(styles))
+        }
+    }
 }
 
 export function visited(...styles) {
