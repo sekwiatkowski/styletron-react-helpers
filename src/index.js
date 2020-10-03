@@ -26,15 +26,3 @@ export function useClassName() {
         return className(css(merge(styles)))
     }
 }
-
-export function visited(...styles) {
-    return {
-        ':visited': merge(styles)
-    }
-}
-
-export function hover(...styles) {
-    return {
-        ':hover': merge(styles)
-    }
-}
