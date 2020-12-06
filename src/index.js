@@ -17,5 +17,5 @@ export function useCss() {
 }
 
 export function joinClassNames(...names) {
-    return { className: names.filter(n => n).join(' ') }
+    return names.filter(n => n).join(' ')
 }
