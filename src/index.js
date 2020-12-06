@@ -1,10 +1,11 @@
 import {useStyletron} from 'styletron-react'
 
 function merge(styles) {
-    return styles.reduce(
-        (acc, style) => ({ ...acc, ...style}),
-        {}
-    )
+    return styles
+        .reduce(
+            (acc, style) => ({ ...acc, ...style}),
+            {}
+        )
 }
 
 export function useCss() {
@@ -15,14 +16,6 @@ export function useCss() {
     }
 }
 
-export function className(...names) {
-    return { className: names.join(' ') }
-}
-
-export function useClassName() {
-    const [css] = useStyletron()
-
-    return (...styles) => {
-        return className(css(merge(styles)))
-    }
+export function joinClassNames(...names) {
+    return { className: names.filter(n => n).join(' ') }
 }
