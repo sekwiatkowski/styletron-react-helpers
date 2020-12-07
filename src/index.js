@@ -16,6 +16,14 @@ export function useCss() {
     }
 }
 
-export function joinClassNames(...names) {
-    return names.filter(n => n).join(' ')
+export function joinClassNames(...items) {
+    const firstItem = items[0]
+
+    if (Array.isArray(firstItem)) {
+        return joinClassNames(...firstItem)
+    }
+
+    return items
+        .filter(n => n)
+        .join(' ')
 }
