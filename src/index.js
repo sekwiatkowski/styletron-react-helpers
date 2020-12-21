@@ -13,7 +13,7 @@ export function useCss() {
         return css(mergeRecursively(styles))
     }
 
-    return mergeStyles()
+    return mergeStyles
 }
 
 export function joinClassNames(...items) {
