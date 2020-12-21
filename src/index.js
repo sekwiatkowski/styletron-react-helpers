@@ -1,5 +1,5 @@
 import {useStyletron} from 'styletron-react'
-import {mergeRecursively} from 'standard-functions'
+import {merge} from 'standard-functions'
 
 export function useCss() {
     const [css] = useStyletron()
@@ -10,7 +10,7 @@ export function useCss() {
             return mergeStyles(...firstItem)
         }
 
-        return css(mergeRecursively(styles))
+        return css(merge(styles))
     }
 
     return mergeStyles

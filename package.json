@@ -1,12 +1,12 @@
 {
     "name": "styletron-react-helpers",
-    "version": "0.3.1",
+    "version": "0.3.2",
     "main": "src/index.js",
     "type": "module",
     "devDependencies": {
         "react": "^16.13.1",
         "styletron-react": "^5.2.7",
-        "standard-functions": "github:sekwiatkowski/standard-functions#v0.23.3"
+        "standard-functions": "github:sekwiatkowski/standard-functions#v0.23.4"
     },
     "peerDependencies": {
         "react": "^16.13.1",
