@@ -1,19 +1,19 @@
 import {useStyletron} from 'styletron-react'
-
-function merge(styles) {
-    return styles
-        .reduce(
-            (acc, style) => ({ ...acc, ...style}),
-            {}
-        )
-}
+import {mergeRecursively} from 'standard-functions'
 
 export function useCss() {
     const [css] = useStyletron()
 
-    return (...styles) => {
-        return css(merge(styles))
+    function mergeStyles(...styles) {
+        const firstItem = styles[0]
+        if (Array.isArray(firstItem)) {
+            return mergeStyles(...firstItem)
+        }
+
+        return css(mergeRecursively(styles))
     }
+
+    return mergeStyles()
 }
 
 export function joinClassNames(...items) {
