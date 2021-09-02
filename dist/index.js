@@ -39,7 +39,7 @@ function useCss() {
       styles[_key] = arguments[_key];
     }
 
-    if ((0, _standardFunctions.isOfLengthOne)(styles)) {
+    if ((0, _standardFunctions.isSingle)(styles)) {
       var firstItem = styles[0];
 
       if ((0, _standardFunctions.isArray)(firstItem)) {
