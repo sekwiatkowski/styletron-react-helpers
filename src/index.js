@@ -1,14 +1,10 @@
 import {useStyletron} from 'styletron-react'
-import {isArray, isNull, isSingle, merge} from 'standard-functions'
+import {isArray, isSingle, merge} from 'standard-functions'
 
 export function useCss() {
     const [css] = useStyletron()
 
     function mergeStyles(...styles) {
-        if (isNull(styles)) {
-            return null
-        }
-
         if (isSingle(styles)) {
             const firstItem = styles[0]
 
@@ -17,7 +13,9 @@ export function useCss() {
             }
         }
 
-        return css(merge(styles))
+        const merged = merge(styles)
+
+        return css(merged)
     }
 
     return mergeStyles
