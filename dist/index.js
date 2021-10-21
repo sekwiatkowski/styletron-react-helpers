@@ -39,6 +39,10 @@ function useCss() {
       styles[_key] = arguments[_key];
     }
 
+    if ((0, _standardFunctions.isNull)(styles)) {
+      return null;
+    }
+
     if ((0, _standardFunctions.isSingle)(styles)) {
       var firstItem = styles[0];
 
