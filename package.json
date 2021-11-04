@@ -1,13 +1,13 @@
 {
     "name": "styletron-react-helpers",
-    "version": "0.4.11",
+    "version": "0.4.12",
     "main": "dist/index.js",
     "module": "src/index.js",
     "scripts": {
         "build": "babel src -d dist"
     },
     "dependencies": {
-        "standard-functions": "github:sekwiatkowski/standard-functions#v0.39.6",
+        "standard-functions": "github:sekwiatkowski/standard-functions#v0.40.2",
         "styletron-react": "^6.0.1"
     },
     "devDependencies": {

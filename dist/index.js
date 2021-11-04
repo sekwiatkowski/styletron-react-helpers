@@ -39,10 +39,6 @@ function useCss() {
       styles[_key] = arguments[_key];
     }
 
-    if ((0, _standardFunctions.isNull)(styles)) {
-      return null;
-    }
-
     if ((0, _standardFunctions.isSingle)(styles)) {
       var firstItem = styles[0];
 
@@ -51,7 +47,8 @@ function useCss() {
       }
     }
 
-    return css((0, _standardFunctions.merge)(styles));
+    var merged = (0, _standardFunctions.merge)(styles);
+    return css(merged);
   }
 
   return mergeStyles;
